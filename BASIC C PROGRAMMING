@@ -1,0 +1,276 @@
+1.swapping
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("%d %d",a,b);
+}
+
+
+2.eligibility
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if ((a+b+c)>=180)
+    {
+        printf("The candidate is eligible");
+    }
+    else
+    {
+        printf("The candidate is not eligible");
+    }
+    
+}
+
+
+3.final payable amount
+#include <stdio.h>
+
+int main()
+{
+    int a,c;
+    float b;
+    scanf("%d",&a);
+    if (a>2000)
+    {
+        b=a*((float)10/100);
+        c=a-b;
+        printf("%d",c);
+    }
+    else
+    {
+        printf("%d",a);
+    }
+    
+}
+
+
+4.money value
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d",&a,&b);
+    c=0;
+    for (int i=0;i<b;i++)
+    {
+        c+=a*2;
+    }
+    printf("%d",c);
+    
+}
+
+
+5.punctual incentive
+#include <stdio.h>
+
+int main()
+{
+    int n,a,s;
+    scanf("%d",&a);
+    scanf("%d",&n);
+    s=0;
+    for(int i=1;i<=n;i++)
+    {
+        s=s+(a+200);
+    }
+    printf("%d",s);
+    
+}
+
+
+6.divisible
+#include <stdio.h>
+
+int main()
+{
+    int m,n,x;
+    scanf("%d%d%d",&m,&n,&x);
+    for(int i=n;i>=m;i--)
+    {
+        if(i%x==0)
+        {
+            printf("%d ",i);
+        }
+    }
+}
+
+
+7.qoutient and divisible
+#include <stdio.h>
+
+int main()
+{
+    int a,b,r,q;
+    scanf("%d%d",&a,&b);
+    q=a/b;
+    r=a%b;
+    printf("%d\n%d",q,r);
+}
+
+
+8.biggest
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if (a>b && a>c)
+    {
+        printf("%d",a);
+    }
+    else if (b>c && b>a)
+    {
+        printf("%d",b);
+    }
+    
+    else
+    {
+        printf("%d",c);
+    }
+    
+}
+
+
+9.odd or even
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    if (n%2==0)
+    {
+        printf("Even");
+    }
+    else
+    {
+        printf("Odd");
+    }
+}
+
+
+10.factorial
+#include <stdio.h>
+
+int main()
+{
+    int n,s=1;
+    scanf("%d",&n);
+    for(int i=n;i!=0;i--)
+    {
+        s*=i;
+    }
+    printf("%d",s);
+}
+
+
+11.first n natural numbers
+#include <stdio.h>
+
+int main()
+{
+    int n,sum=0;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        sum+=i;
+    }
+    printf("%d",sum);
+}
+
+
+12.nth term in fibonacci series
+#include <stdio.h>
+
+int main()
+{
+    int n,a,b,c;
+    scanf("%d",&n);
+    a=1;
+    b=0;
+    c=0;
+    for(int i=1;i<=n;i++)
+    {
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    printf("%d",c);
+}
+
+
+13.power of integers
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d",&a,&b);
+    c=pow(a,b);
+    printf("%d",c);
+}
+
+
+14.prime or not
+#include <stdio.h>
+
+int main()
+{
+    int n,i,flag=0;
+    scanf("%d",&n);
+    if (n!=2 && n%2==0)
+    {
+        printf("No Prime");
+    }
+    else
+    {
+    
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            {
+               flag=1; 
+               break;
+            }
+        }
+        if(flag==0)
+        {
+            printf("Prime");
+        }
+        else
+        {
+            printf("No Prime");
+        }
+    }
+}
+
+
+15.find the reverse
+#include <stdio.h>
+
+int main()
+{
+    int a,b,s;
+    s=0;
+    scanf("%d",&a);
+    while(a>0)
+    {
+        b=a%10;
+        s=s*10+b;
+        a=a/10;
+    }
+    printf("%d",s);
+}
